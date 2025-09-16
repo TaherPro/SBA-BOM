@@ -9,7 +9,9 @@
   <body>
     <div id="container">
       <h1>WEEKLY Submission</h1>
-      <div id="asgmt">
+
+      <!-- Assignment Section -->
+      <section id="asgmt">
         <h2>Assignments List</h2>
         <div class="btn-group">
           <button id="btn">#1</button>
@@ -19,25 +21,33 @@
           <button id="btn">#5</button>
           <button id="btn">Total</button>
         </div>
-        <br />
-      </div>
-      <div id="add-sub">
+      </section>
+
+      <!-- Add Submission -->
+      <section id="add-sub">
         <h3>Add Submission</h3>
-        <br />
-        <label for="text">Title</label>
-        <input type="text" />
-        <label for="date">Date:</label>
-        <input type="date" />
-      </div>
-      <div id="Sub">
+        <form id="submissionForm">
+            <label for="text">Title:</label>
+            <input type="text" required minlength="10"/>
+            <label for="date">Date:</label>
+            <input type="date" required/>
+            <button type="submit" class="submitBtn">Submit</button>
+        </form>
+      </section>
+
+      <!-- Submission Type -->
+      <section id="Sub">
         <h3>Submission Type</h3>
         <button id="submit">URL</button>
         <button id="submit">FORM</button>
-      </div>
+      </section>
+
+      <!-- Finishing Message -->
       <div id="done">
         <h1>You're Free Now!</h1>
       </div>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
