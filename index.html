@@ -14,12 +14,12 @@
       <section id="asgmt">
         <h2>Assignments List</h2>
         <div class="btn-group">
-          <button id="btn">#1</button>
-          <button id="btn">#2</button>
-          <button id="btn">#3</button>
-          <button id="btn">#4</button>
-          <button id="btn">#5</button>
-          <button id="btn">Total</button>
+          <button class="btn">#1</button>
+          <button class="btn">#2</button>
+          <button class="btn">#3</button>
+          <button class="btn">#4</button>
+          <button class="btn">#5</button>
+          <button class="btn">Total</button>
         </div>
       </section>
 
@@ -27,19 +27,31 @@
       <section id="add-sub">
         <h3>Add Submission</h3>
         <form id="submissionForm">
-            <label for="text">Title:</label>
-            <input type="text" required minlength="10"/>
-            <label for="date">Date:</label>
-            <input type="date" required/>
-            <button type="submit" class="submitBtn">Submit</button>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required minlength="10" />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required /><br><br>
+
+          <!-- Submission Type -->
+          <div class="submission-type">
+            <h3>Submission Type:</h3>
+
+            <input type="radio" id="url" name="url" value="url" />
+            <label for="url">URL</label>
+
+            <input type="radio" id="file" name="file" value="file" />
+            <label for="file">FILE</label>
+          </div><br>
+
+          <button type="submit" class="submitBtn">ADD</button>
         </form>
       </section>
 
-      <!-- Submission Type -->
-      <section id="Sub">
-        <h3>Submission Type</h3>
-        <button id="submit">URL</button>
-        <button id="submit">FORM</button>
+      <!-- Display Submission -->
+      <section id="submissions">
+        <h3>All Submissions</h3>
+        <ul id="submissionList"></ul>
       </section>
 
       <!-- Finishing Message -->

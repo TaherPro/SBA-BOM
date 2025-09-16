@@ -1,7 +1,7 @@
 // Cache at least one element using selectElementById.
-const container = document.getElementById("container");
+
 // Cache at least one element using querySelector or querySelectorAll.
-const buttons = document.querySelectorAll("btn");
+
 // Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling, etc.).
 // Iterate over a collection of elements to accomplish some task.
 // Create at least one element using createElement.
@@ -16,3 +16,7 @@ const buttons = document.querySelectorAll("btn");
 // Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.) 
 
 
+const container = document.getElementById("container");
+const buttons = document.querySelectorAll("btn");
+const submissionForm = document.getElementById("submissionForm");
+const titleInput = document.getElementById("title");

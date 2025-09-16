@@ -10,30 +10,41 @@ body {
     color: rgb(80, 1, 1);
     text-align: center;
 }
-
-#btn {
+.btn {
     position: relative;
     gap: 12px;
     border-radius: 8px;
     color: #1b1717;
     padding: 20px 40px;
 }
-.btn:hover {
-  background-color: #f0a47e;
-}
+
 .btn-group {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin: 10px 0;
 }
+/* .btn-group:hover {
+  background-color: #ec7b42;
+} */
+
 h1 {
     text-align: center;
     color: rgb(80, 1, 1);
     background-color: #f6f4f3; 
     font-family:cursive;
 }
-#submit {
-    padding: 10px 30px;
+.submitBtn {
+    padding: 10px 40px;
     border-radius: 8px;
+}
+.submission-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* space between heading and radios */
+}
+
+.submission-type h3 {
+  margin: 0; /* remove extra spacing */
 }
