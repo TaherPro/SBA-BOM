@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(207, 163, 113);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #c29494;
+
+}
+#container {
+    position: relative;
+    color: rgb(80, 1, 1);
+    text-align: center;
+}
+#btn {
+    position: relative;
+    gap: 12px;
+    border-radius: 8px;
+    color: #1b1717;
+    padding: 20px 40px;
+}
+h1 {
+    text-align: center;
+    color: rgb(80, 1, 1);
+    background-color: #f6f4f3; 
+    font-family:cursive;
+}
+#submit {
+    padding: 10px 30px;
+    border-radius: 8px;
+}
