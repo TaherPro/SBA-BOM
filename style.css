@@ -1,50 +1,42 @@
 body {
     background-color: rgb(207, 163, 113);
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #c29494;
-
 }
 #container {
     position: relative;
-    color: rgb(80, 1, 1);
     text-align: center;
 }
 .btn {
     position: relative;
-    gap: 12px;
-    border-radius: 8px;
-    color: #1b1717;
     padding: 20px 40px;
+    border-radius: 8px;
 }
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
+.btn:hover {
+    background: rgb(238, 205, 133);
 }
-/* .btn-group:hover {
-  background-color: #ec7b42;
-} */
-
 h1 {
     text-align: center;
-    color: rgb(80, 1, 1);
     background-color: #f6f4f3; 
-    font-family:cursive;
+    font-family: cursive;
 }
 .submitBtn {
     padding: 10px 40px;
     border-radius: 8px;
 }
 .submission-type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px; /* space between heading and radios */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.submission-type h3 {
-  margin: 0; /* remove extra spacing */
+.submitBtn:hover {
+    background: rgb(238, 205, 133);
+}
+#submissionList li {
+    background-color: #f8f9fa;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    max-width: 500px;
+    margin: 10px auto;
 }
