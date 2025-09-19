@@ -8,8 +8,8 @@ Clone this repository or download the files. https://github.com/TaherPro/SBA-SUB
 
 Task Management
 - Add new tasks with subject, description, due date, and type.
-- Tasks are listed dynamically in the submission list.
-- A running total of submissions is displayed.
+- Tasks will be listed in the submission list.
+- The total of submissions will display.
 - Reminders message if the tasks hit the limit 5 or more submissions are added.
 
 Technologies Used
