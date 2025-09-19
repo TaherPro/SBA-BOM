@@ -13,13 +13,17 @@ body {
 }
 .btn:hover {
     background: rgb(238, 205, 133);
+    color: #000;
+    font-weight: bold;
 }
 h1 {
     text-align: center;
     background-color: #f6f4f3; 
     font-family: cursive;
 }
-
+.btn.active {
+    background: rgb(238, 205, 133);
+}
 .submitBtn {
     padding: 10px 40px;
     border-radius: 8px;

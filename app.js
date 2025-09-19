@@ -1,6 +1,6 @@
-// cashed elements for the buttons and form tasks list 
+// cached elements for the buttons, form and tasks list 
 const container = document.getElementById("container");
-const subjectButtons = document.getElementById("#asgmt .btn");
+const subjectButtons = document.querySelectorAll("#asgmt .btn");
 const submissionForm = document.getElementById("submissionForm");
 const titleInput = document.getElementById("title");
 const dateInput = document.getElementById("date");
@@ -10,12 +10,12 @@ const radioInputs = document.querySelectorAll("input[name='submissionType']");
 const totalCountElem = document.createElement("p");
 submissionList.parentNode.appendChild(totalCountElem);
 
-// Track selected subject
+// Track selected subject with submission count
 let selectedSubject = null;
 let submissionCount = 0;
 totalCountElem.textContent = `Total Submissions: ${submissionCount}`;
 
-// will loop over all subject btn, then print selected subject
+// loop over all subject btn, highlight selected subject and save the choice
 subjectButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
         selectedSubject = btn.textContent;
@@ -25,7 +25,7 @@ subjectButtons.forEach((btn) => {
     });
 });
 
-// preload sample task in the list
+// preload sample task in the list for display
 const fragment = document.createDocumentFragment();
 const li = document.createElement("li");
 li.textContent = "Subject - Description - Due Date - [Type]";
@@ -56,17 +56,18 @@ submissionForm.addEventListener('submit', (e) => {
         alert("Please select submission type!");
         return;
     }
-    // create submission item 
+    // create and append new submission item 
     const li = document.createElement("li");
     li.textContent = `${selectedSubject} - ${titleInput.value} - ${dateInput.value} - [${selectedType.toUpperCase()}]`;
     li.setAttribute("data-subject", selectedSubject);
     li.setAttribute("data-type", selectedType);
     submissionList.appendChild(li);
 
-    submissionCount++;
+    // update counter 
+    submissionCount++; 
     totalCountElem.textContent = `Total Submissions: ${submissionCount}`;
 
-    // reminder message
+    // reminder message if the tasks cross the limit
     if (submissionCount >= 5) {
         doneMessage.hidden = false;
         doneMessage.querySelector('h1').textContent = "Please Get Some Tasks Done First!";
@@ -76,5 +77,11 @@ submissionForm.addEventListener('submit', (e) => {
     submissionForm.reset();
     subjectButtons.forEach(b => b.classList.remove("active"));
     selectedSubject = null;
+});
+// BOM properties and method
+console.log("Window width:", window.innerWidth);
+console.log("Window height", window.innerHeight);
 
+window.addEventListener("load", () => {
+    alert("Welcome to the submission Tacker Page");
 });
