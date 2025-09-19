@@ -66,4 +66,15 @@ submissionForm.addEventListener('submit', (e) => {
     submissionCount++;
     totalCountElem.textContent = `Total Submissions: ${submissionCount}`;
 
+    // reminder message
+    if (submissionCount >= 5) {
+        doneMessage.hidden = false;
+        doneMessage.querySelector('h1').textContent = "Please Get Some Tasks Done First!";
+    }
+
+    // reset the form selection
+    submissionForm.reset();
+    subjectButtons.forEach(b => b.classList.remove("active"));
+    selectedSubject = null;
+
 });
